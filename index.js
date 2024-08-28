@@ -34,7 +34,7 @@ const stopbtn=document.getElementById('stopbtn');
 
 stopbtn.onclick=function(){
      alarmsound.pause();
-     alarmsound.currentTime=0;//reset the alarm sound to start
+     alarmsound.currentTime=0;//reset the alarm sound 
 
 
 setTimeout(()=>{
