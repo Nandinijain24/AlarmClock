@@ -12,17 +12,20 @@
 <div class="clock">
    <img src="clock.jpg">
    
-      <h1>00:00:00</h1>
-      <h2>Alarm at:</h2>
+      <h1 id="timing">00:00:00</h1>
+      <h2 >Alarm at: <span id="settime"></span></h2>
  <form>
-   <input type="number" placeholder="Hours">
-   <input type="number" placeholder="Minutes">
+   <input type="number"  placeholder="00" id="hours">
+   <input type="number" placeholder="00" id="min">
  </form>
- <button>Set Alarm</button>
- <audio></audio>
+ <button onclick="setAlarm()">Set Alarm</button>
+ <button id="stopbtn">stop</button>
+ <audio src="mixkit-digital-clock-digital-alarm-buzzer-992.wav" id="alarmsound"></audio>
 </div>
 
+
 </div>
+
 
    <script src="index.js"></script>
 </body>
