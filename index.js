@@ -36,10 +36,16 @@ if (playSound) {
                     systemhours = systemhours - 12;
                }
 
+main
                if (alarmhours == systemhours && alarmminute == systemminute) {
                     alarmsound.play();
                     console.log("started")
                }
+stopbtn.onclick=function(){
+     console.log("yes")
+
+     alarmsound.pause();
+     alarmsound.currentTime=0;//reset the alarm sound  main
 
           }, 5000)
      }
@@ -49,6 +55,7 @@ if (playSound) {
 
 const stopbtn = document.getElementById('stopbtn');
 
+       main
 stopbtn.onclick = function () {
     
           playSound = false
@@ -64,6 +71,13 @@ stopbtn.onclick = function () {
      // setTimeout(()=>{
      //      alarmsound.play();
      // },9000);
+
+ setTimeout(()=>{
+     alarmsound.play();
+},8000);
+
+
+ main
 };
 
 
