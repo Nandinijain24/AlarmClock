@@ -34,11 +34,15 @@ let check=setInterval(() =>{
 const stopbtn=document.getElementById('stopbtn');
 
 stopbtn.onclick=function(){
+     console.log("yes")
+
      alarmsound.pause();
      alarmsound.currentTime=0;//reset the alarm sound 
 
 
-setTimeout(()=>{
+ setTimeout(()=>{
      alarmsound.play();
-},9000);
+},8000);
+
+
 };
