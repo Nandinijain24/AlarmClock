@@ -58,13 +58,26 @@ input{
 }
 button{
      margin-top: 2rem;
-     padding: 0.6rem;
+     padding: 0.8rem;
      font-size: 1rem;
      border:none;
      font-weight: 500;
      color:aliceblue;
      background-color: blueviolet;
-     border-radius: 10px;
+     border-radius: 5px;
      cursor: pointer;
+     margin-right: 20px;
+
 }
 
+.container{
+     display: inline-block;
+     margin-right: px;
+     justify-content: flex-start;
+}
+button:hover{
+     background-color: blueviolet;
+     color:#ffffff;
+     transform: scale(1.05);
+   
+}
