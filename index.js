@@ -1,3 +1,43 @@
+
+let h = document.getElementById('hours')
+let m = document.getElementById('mins')
+let AMPM = document.getElementById("period")
+let hourClick = false;
+let minClick = false;
+
+function hoursoption() {
+    if (hourClick == false) {
+        console.log(hourClick)
+        for (let i = 24; i >= 1; i--) {
+            const houroption = document.createElement("option")
+            console.log("option")
+
+            if (i <= 12) {
+                houroption.textContent = i;
+                houroption.value = `${i}`
+                h.appendChild(houroption)
+
+            }
+        }
+    }
+    hourClick = true;
+    console.log(hourClick)
+}
+
+function minsoption() {
+    if(minClick == false){
+    for (let i = 60; i >= 1; i--) {
+        const minoption = document.createElement("option");
+        minoption.textContent = i;
+        minoption.value = `${i}`
+        m.appendChild(minoption)
+
+    }
+}
+minClick = true
+}
+
+
 let playSound = true;
 let check;
 
@@ -7,10 +47,13 @@ setInterval(() => {
 }, 1000);
 
 function setAlarm() {
-    let h = document.getElementById('hours').value;
-    let m = document.getElementById('min').value;
-    settime.innerHTML = h + ":" + m + ":00";
-    console.log("");
+    let hour = h.value;
+    let minute = m.value;
+    let AMPMvalue = AMPM.value;
+    settime.innerHTML = hour + ":" + minute + ":00 " + AMPMvalue;
+    playSound = true
+    startAlarm()
+    console.log("going to start");
 }
 
 if (playSound) {
@@ -47,11 +90,14 @@ document.getElementById('stopbtn').onclick = function () {
         alarmsound.play();
     }, 6000);
 };
-startAlarm();
 
-document.getElementById('resetbtn').onclick =function(){
-   let h= document.getElementById('hours').value="";
-   let m= document.getElementById('min').value="";
-    settime.innerHTML = h + ":" + m + ":00";
+
+document.getElementById('resetbtn').onclick = function () {
+    h.value = "";
+    m.value = "";
+    AMPM.value = ""
+    settime.innerHTML = ""
+    clearInterval(check)
+    playSound = false
     console.log("alarm reset");
 }
