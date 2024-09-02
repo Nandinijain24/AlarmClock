@@ -2,11 +2,11 @@
 let h = document.getElementById('hours')
 let m = document.getElementById('mins')
 let AMPM = document.getElementById("period")
-let hourClick = false;
-let minClick = false;
+let hourClick = false;                // this variable handles state of running a function, helps to run a func.                
+let minClick = false;              //once, when variable is false func. will run
 
-function hoursoption() {
-    if (hourClick == false) {
+function hoursoption() {               //handle the hours section of clock
+    if (hourClick == false) {          
         console.log(hourClick)
         for (let i = 24; i >= 1; i--) {
             const houroption = document.createElement("option")
@@ -20,11 +20,11 @@ function hoursoption() {
             }
         }
     }
-    hourClick = true;
+    hourClick = true;               //this change in variable will top running function
     console.log(hourClick)
 }
 
-function minsoption() {
+function minsoption() {                ////handle the mins section of clock
     if(minClick == false){
     for (let i = 60; i >= 1; i--) {
         const minoption = document.createElement("option");
@@ -38,8 +38,8 @@ minClick = true
 }
 
 
-let playSound = true;
-let check;
+let playSound = true;        //variable is true funcion will run otherwise stop funtionality,when variable is false
+let check;                   
 
 setInterval(() => {
     let time = new Date();
@@ -79,7 +79,7 @@ if (playSound) {
 }
 
 document.getElementById('stopbtn').onclick = function () {
-    playSound = false;
+    playSound = false;    //stop alarm
     alarmsound.pause();
     alarmsound.currentTime = 0;
     alert("Aalarm will ring in 6 seconds");
@@ -98,6 +98,6 @@ document.getElementById('resetbtn').onclick = function () {
     AMPM.value = ""
     settime.innerHTML = ""
     clearInterval(check)
-    playSound = false
+    playSound = false //stop alarm
     console.log("alarm reset");
 }
