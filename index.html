@@ -15,8 +15,20 @@
       <h1 id="timing">00:00:00</h1>
       <h2 >Alarm at: <span id="settime"></span></h2>
  <form>
-   <input type="number"  placeholder="00" id="hours">
-   <input type="number" placeholder="00" id="min">
+   <label  for="hours">hours:</label>
+   <select onclick="hoursoption()" name="hours" size="1" id="hours" >
+   </select>
+  
+   <!-- <input type="number" placeholder="minutes" id="min"> -->
+   <label for="mins">minutes</label>
+   <select onclick="minsoption()" name="mins" id="mins">
+   </select>
+
+   <label for="period">AM/PM</label>
+   <select name="secs" id="period">
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+   </select>
  </form>
  <div class="container">
  <button id="resetbtn">Reset</button>

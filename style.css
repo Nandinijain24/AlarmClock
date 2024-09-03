@@ -24,7 +24,7 @@ body{
      align-items: center;
      justify-content: center;
      height: 100vh;
-     
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -49,13 +49,15 @@ width:100px;
      font-size: 20px;
      
    }
-input{
-     font-size: 1rem;
-     width: 60px;
-     text-decoration: center;
-     height: 60px;
-     
+label{
+    font-size: 1.5rem;
 }
+
+select{
+     width: 50px;
+     height: 30px;
+}
+
 button{
      margin-top: 2rem;
      padding: 0.8rem;
